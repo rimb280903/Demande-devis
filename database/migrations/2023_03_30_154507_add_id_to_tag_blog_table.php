@@ -9,20 +9,20 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::table('users', function(Blueprint $table){
-            $table->integer('role')->default(1)->after('email');
-        });
-    }
+    public function up()
+{
+    Schema::table('tag_blog', function (Blueprint $table) {
+        $table->id();
+    });
+}
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('users', function(Blueprint $table){
-        $table->dropColumn('role');
-    });
+        Schema::table('tag_blog', function (Blueprint $table) {
+            //
+        });
     }
 };
